@@ -5,7 +5,7 @@ import com.saksa.service.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/genres")
@@ -15,8 +15,8 @@ public class GenreController {
     private GenreService genreService;
 
     @GetMapping
-    public ResponseEntity<Set<GenreEntity>> getAll() {
-        Set<GenreEntity> listActors = this.genreService.getAll();
+    public ResponseEntity<List<GenreEntity>> getAll() {
+        List<GenreEntity> listActors = this.genreService.getAll();
         return ResponseEntity.ok(listActors);
     }
 

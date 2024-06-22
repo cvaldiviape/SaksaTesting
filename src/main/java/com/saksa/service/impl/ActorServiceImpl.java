@@ -5,7 +5,7 @@ import com.saksa.repository.ActorRepository;
 import com.saksa.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Set;
+import java.util.List;
 
 @Service
 public class ActorServiceImpl implements ActorService {
@@ -14,7 +14,7 @@ public class ActorServiceImpl implements ActorService {
     private ActorRepository actorRepository;
 
     @Override
-    public Set<ActorEntity> getAll() {
+    public List<ActorEntity> getAll() {
         return null;
     }
 

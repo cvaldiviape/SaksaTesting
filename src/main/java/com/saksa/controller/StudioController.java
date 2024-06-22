@@ -5,7 +5,7 @@ import com.saksa.service.StudioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/studios")
@@ -15,8 +15,8 @@ public class StudioController {
     private StudioService studioService;
 
     @GetMapping
-    public ResponseEntity<Set<StudioEntity>> getAll() {
-        Set<StudioEntity> listActors = this.studioService.getAll();
+    public ResponseEntity<List<StudioEntity>> getAll() {
+        List<StudioEntity> listActors = this.studioService.getAll();
         return ResponseEntity.ok(listActors);
     }
 

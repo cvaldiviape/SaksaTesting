@@ -5,6 +5,8 @@ import com.saksa.repository.DirectorRepository;
 import com.saksa.service.DirectorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -14,7 +16,7 @@ public class DirectorServiceImpl implements DirectorService {
     private DirectorRepository directorRepository;
 
     @Override
-    public Set<DirectorEntity> getAll() {
+    public List<DirectorEntity> getAll() {
         return null;
     }
 

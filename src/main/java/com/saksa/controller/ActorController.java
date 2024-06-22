@@ -5,7 +5,7 @@ import com.saksa.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/actors")
@@ -15,8 +15,8 @@ public class ActorController {
     private ActorService actorService;
 
     @GetMapping
-    public ResponseEntity<Set<ActorEntity>> getAll() {
-        Set<ActorEntity> listActors = this.actorService.getAll();
+    public ResponseEntity<List<ActorEntity>> getAll() {
+        List<ActorEntity> listActors = this.actorService.getAll();
         return ResponseEntity.ok(listActors);
     }
 

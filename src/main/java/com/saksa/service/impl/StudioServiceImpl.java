@@ -5,7 +5,7 @@ import com.saksa.repository.StudioRepository;
 import com.saksa.service.StudioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Set;
+import java.util.List;
 
 @Service
 public class StudioServiceImpl implements StudioService {
@@ -14,7 +14,7 @@ public class StudioServiceImpl implements StudioService {
     private StudioRepository studioRepository;
 
     @Override
-    public Set<StudioEntity> getAll() {
+    public List<StudioEntity> getAll() {
         return null;
     }
 

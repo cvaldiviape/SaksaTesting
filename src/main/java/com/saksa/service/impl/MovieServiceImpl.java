@@ -5,7 +5,7 @@ import com.saksa.repository.MovieRepository;
 import com.saksa.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Set;
+import java.util.List;
 
 @Service
 public class MovieServiceImpl implements MovieService {
@@ -14,7 +14,7 @@ public class MovieServiceImpl implements MovieService {
     private MovieRepository movieRepository;
 
     @Override
-    public Set<MovieEntity> getAll() {
+    public List<MovieEntity> getAll() {
         return null;
     }
 

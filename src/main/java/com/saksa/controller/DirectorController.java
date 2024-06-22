@@ -5,7 +5,7 @@ import com.saksa.service.DirectorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/directors")
@@ -15,8 +15,8 @@ public class DirectorController {
     private DirectorService directorService;
 
     @GetMapping
-    public ResponseEntity<Set<DirectorEntity>> getAll() {
-        Set<DirectorEntity> listActors = this.directorService.getAll();
+    public ResponseEntity<List<DirectorEntity>> getAll() {
+        List<DirectorEntity> listActors = this.directorService.getAll();
         return ResponseEntity.ok(listActors);
     }
 

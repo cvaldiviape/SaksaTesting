@@ -5,7 +5,7 @@ import com.saksa.repository.GenreRespository;
 import com.saksa.service.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Set;
+import java.util.List;
 
 @Service
 public class GenreServiceImpl implements GenreService {
@@ -14,7 +14,7 @@ public class GenreServiceImpl implements GenreService {
     private GenreRespository genreRespository;
 
     @Override
-    public Set<GenreEntity> getAll() {
+    public List<GenreEntity> getAll() {
         return null;
     }
 
