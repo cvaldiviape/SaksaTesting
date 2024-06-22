@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Builder
@@ -38,5 +39,13 @@ public class MovieEntity {
             joinColumns = @JoinColumn(name = "id_movie", referencedColumnName = "id_movie"),
             inverseJoinColumns = @JoinColumn(name = "id_genre", referencedColumnName = "id_genre"))
     private Set<GenreEntity> listGenres = new HashSet<>();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MovieEntity movie = (MovieEntity) o;
+        return Objects.equals(idMovie, movie.idMovie) && Objects.equals(synopsis, movie.synopsis) && Objects.equals(year, movie.year) && Objects.equals(director, movie.director) && Objects.equals(listActors, movie.listActors) && Objects.equals(studio, movie.studio) && Objects.equals(listGenres, movie.listGenres);
+    }
 
 }

@@ -3,6 +3,7 @@ package com.saksa.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Builder
 @Getter
@@ -24,5 +25,13 @@ public class DirectorEntity {
     @OneToOne
     @JoinColumn(name = "id_movie")
     private MovieEntity movie;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DirectorEntity director = (DirectorEntity) o;
+        return Objects.equals(idDirector, director.idDirector) && Objects.equals(name, director.name) && Objects.equals(birthday, director.birthday) && Objects.equals(movie, director.movie);
+    }
 
 }

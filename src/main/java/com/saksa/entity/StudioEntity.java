@@ -2,6 +2,7 @@ package com.saksa.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.Objects;
 
 @Builder
 @Getter
@@ -22,5 +23,13 @@ public class StudioEntity {
     private String phone;
     @Column(name = "web_page", nullable = true, unique = true)
     private String webPage;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StudioEntity studio = (StudioEntity) o;
+        return Objects.equals(idStudio, studio.idStudio) && Objects.equals(name, studio.name) && Objects.equals(phone, studio.phone) && Objects.equals(webPage, studio.webPage);
+    }
 
 }

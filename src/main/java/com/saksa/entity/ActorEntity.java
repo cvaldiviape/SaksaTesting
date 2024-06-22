@@ -4,6 +4,7 @@ import com.saksa.utils.Sex;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
+import java.util.Objects;
 
 @Builder
 @Getter
@@ -26,5 +27,13 @@ public class ActorEntity {
     @ManyToOne
     @JoinColumn(name="id_movie")
     private MovieEntity movie;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ActorEntity that = (ActorEntity) o;
+        return Objects.equals(idActor, that.idActor) && Objects.equals(name, that.name) && sex == that.sex && Objects.equals(movie, that.movie);
+    }
 
 }
