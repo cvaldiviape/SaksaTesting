@@ -1,6 +1,6 @@
 package com.saksa.controller;
 
-import com.saksa.entity.GenreEntity;
+import com.saksa.dto.GenreDto;
 import com.saksa.service.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,26 +15,26 @@ public class GenreController {
     private GenreService genreService;
 
     @GetMapping
-    public ResponseEntity<List<GenreEntity>> getAll() {
-        List<GenreEntity> listActors = this.genreService.getAll();
+    public ResponseEntity<List<GenreDto>> getAll() {
+        List<GenreDto> listActors = this.genreService.getAll();
         return ResponseEntity.ok(listActors);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<GenreEntity> getById(@PathVariable Integer id) {
-        GenreEntity genre = this.genreService.getById(id);
+    public ResponseEntity<GenreDto> getById(@PathVariable Integer id) {
+        GenreDto genre = this.genreService.getById(id);
         return ResponseEntity.ok(genre);
     }
 
     @PostMapping
-    public ResponseEntity<GenreEntity> create(@RequestBody GenreEntity genreEntity) {
-        GenreEntity genre = this.genreService.create(genreEntity);
+    public ResponseEntity<GenreDto> create(@RequestBody GenreDto genreDto) {
+        GenreDto genre = this.genreService.create(genreDto);
         return ResponseEntity.ok(genre);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<GenreEntity> update(@RequestBody GenreEntity genreEntity, @PathVariable Integer id) {
-        GenreEntity genre = this.genreService.update(genreEntity, id);
+    public ResponseEntity<GenreDto> update(@RequestBody GenreDto genreDto, @PathVariable Integer id) {
+        GenreDto genre = this.genreService.update(genreDto, id);
         return ResponseEntity.ok(genre);
     }
 

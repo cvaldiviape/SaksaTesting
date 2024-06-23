@@ -1,12 +1,12 @@
 package com.saksa.service;
 
-import com.saksa.entity.DirectorEntity;
+import com.saksa.dto.DirectorDto;
 import java.util.List;
 
 public interface DirectorService {
-    public List<DirectorEntity> getAll();
-    public DirectorEntity getById(Integer id);
-    public DirectorEntity create(DirectorEntity director);
-    public DirectorEntity update(DirectorEntity director, Integer id);
+    public List<DirectorDto> getAll();
+    public DirectorDto getById(Integer id);
+    public DirectorDto create(DirectorDto directorDto);
+    public DirectorDto update(DirectorDto directorDto, Integer id);
     public void delete(Integer id);
 }

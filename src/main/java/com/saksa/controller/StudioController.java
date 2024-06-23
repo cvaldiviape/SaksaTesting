@@ -1,6 +1,6 @@
 package com.saksa.controller;
 
-import com.saksa.entity.StudioEntity;
+import com.saksa.dto.StudioDto;
 import com.saksa.service.StudioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,26 +15,26 @@ public class StudioController {
     private StudioService studioService;
 
     @GetMapping
-    public ResponseEntity<List<StudioEntity>> getAll() {
-        List<StudioEntity> listActors = this.studioService.getAll();
+    public ResponseEntity<List<StudioDto>> getAll() {
+        List<StudioDto> listActors = this.studioService.getAll();
         return ResponseEntity.ok(listActors);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<StudioEntity> getById(@PathVariable Integer id) {
-        StudioEntity studio = this.studioService.getById(id);
+    public ResponseEntity<StudioDto> getById(@PathVariable Integer id) {
+        StudioDto studio = this.studioService.getById(id);
         return ResponseEntity.ok(studio);
     }
 
     @PostMapping
-    public ResponseEntity<StudioEntity> create(@RequestBody StudioEntity studioEntity) {
-        StudioEntity studio = this.studioService.create(studioEntity);
+    public ResponseEntity<StudioDto> create(@RequestBody StudioDto studioDto) {
+        StudioDto studio = this.studioService.create(studioDto);
         return ResponseEntity.ok(studio);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<StudioEntity> update(@RequestBody StudioEntity studioEntity, @PathVariable Integer id) {
-        StudioEntity studio = this.studioService.update(studioEntity, id);
+    public ResponseEntity<StudioDto> update(@RequestBody StudioDto studioDto, @PathVariable Integer id) {
+        StudioDto studio = this.studioService.update(studioDto, id);
         return ResponseEntity.ok(studio);
     }
 

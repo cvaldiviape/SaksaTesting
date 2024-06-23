@@ -1,13 +1,11 @@
 package com.saksa.service.impl;
 
-import com.saksa.entity.DirectorEntity;
+import com.saksa.dto.DirectorDto;
 import com.saksa.repository.DirectorRepository;
 import com.saksa.service.DirectorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class DirectorServiceImpl implements DirectorService {
@@ -16,22 +14,22 @@ public class DirectorServiceImpl implements DirectorService {
     private DirectorRepository directorRepository;
 
     @Override
-    public List<DirectorEntity> getAll() {
+    public List<DirectorDto> getAll() {
         return null;
     }
 
     @Override
-    public DirectorEntity getById(Integer id) {
+    public DirectorDto getById(Integer id) {
         return null;
     }
 
     @Override
-    public DirectorEntity create(DirectorEntity director) {
+    public DirectorDto create(DirectorDto directorDto) {
         return null;
     }
 
     @Override
-    public DirectorEntity update(DirectorEntity director, Integer id) {
+    public DirectorDto update(DirectorDto directorDto, Integer id) {
         return null;
     }
 

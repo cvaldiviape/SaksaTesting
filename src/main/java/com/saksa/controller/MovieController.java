@@ -1,6 +1,6 @@
 package com.saksa.controller;
 
-import com.saksa.entity.MovieEntity;
+import com.saksa.dto.MovieDto;
 import com.saksa.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,26 +15,26 @@ public class MovieController {
     private MovieService movieService;
 
     @GetMapping
-    public ResponseEntity<List<MovieEntity>> getAll() {
-        List<MovieEntity> listActors = this.movieService.getAll();
+    public ResponseEntity<List<MovieDto>> getAll() {
+        List<MovieDto> listActors = this.movieService.getAll();
         return ResponseEntity.ok(listActors);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<MovieEntity> getById(@PathVariable Integer id) {
-        MovieEntity movie = this.movieService.getById(id);
+    public ResponseEntity<MovieDto> getById(@PathVariable Integer id) {
+        MovieDto movie = this.movieService.getById(id);
         return ResponseEntity.ok(movie);
     }
 
     @PostMapping
-    public ResponseEntity<MovieEntity> create(@RequestBody MovieEntity movieEntity) {
-        MovieEntity movie = this.movieService.create(movieEntity);
+    public ResponseEntity<MovieDto> create(@RequestBody MovieDto movieDto) {
+        MovieDto movie = this.movieService.create(movieDto);
         return ResponseEntity.ok(movie);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MovieEntity> update(@RequestBody MovieEntity movieEntity, @PathVariable Integer id) {
-        MovieEntity movie = this.movieService.update(movieEntity, id);
+    public ResponseEntity<MovieDto> update(@RequestBody MovieDto movieDto, @PathVariable Integer id) {
+        MovieDto movie = this.movieService.update(movieDto, id);
         return ResponseEntity.ok(movie);
     }
 

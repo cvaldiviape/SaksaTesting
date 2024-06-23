@@ -1,6 +1,6 @@
 package com.saksa.service.impl;
 
-import com.saksa.entity.ActorEntity;
+import com.saksa.dto.ActorDto;
 import com.saksa.repository.ActorRepository;
 import com.saksa.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,22 +14,22 @@ public class ActorServiceImpl implements ActorService {
     private ActorRepository actorRepository;
 
     @Override
-    public List<ActorEntity> getAll() {
+    public List<ActorDto> getAll() {
         return null;
     }
 
     @Override
-    public ActorEntity getById(Integer id) {
+    public ActorDto getById(Integer id) {
         return null;
     }
 
     @Override
-    public ActorEntity create(ActorEntity actor) {
+    public ActorDto create(ActorDto actorDto) {
         return null;
     }
 
     @Override
-    public ActorEntity update(ActorEntity actor, Integer id) {
+    public ActorDto update(ActorDto actorDto, Integer id) {
         return null;
     }
 

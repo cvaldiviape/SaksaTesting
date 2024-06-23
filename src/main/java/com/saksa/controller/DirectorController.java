@@ -1,6 +1,6 @@
 package com.saksa.controller;
 
-import com.saksa.entity.DirectorEntity;
+import com.saksa.dto.DirectorDto;
 import com.saksa.service.DirectorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,26 +15,26 @@ public class DirectorController {
     private DirectorService directorService;
 
     @GetMapping
-    public ResponseEntity<List<DirectorEntity>> getAll() {
-        List<DirectorEntity> listActors = this.directorService.getAll();
+    public ResponseEntity<List<DirectorDto>> getAll() {
+        List<DirectorDto> listActors = this.directorService.getAll();
         return ResponseEntity.ok(listActors);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DirectorEntity> getById(@PathVariable Integer id) {
-        DirectorEntity director = this.directorService.getById(id);
+    public ResponseEntity<DirectorDto> getById(@PathVariable Integer id) {
+        DirectorDto director = this.directorService.getById(id);
         return ResponseEntity.ok(director);
     }
 
     @PostMapping
-    public ResponseEntity<DirectorEntity> create(@RequestBody DirectorEntity directorEntity) {
-        DirectorEntity director = this.directorService.create(directorEntity);
+    public ResponseEntity<DirectorDto> create(@RequestBody DirectorDto directorDto) {
+        DirectorDto director = this.directorService.create(directorDto);
         return ResponseEntity.ok(director);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<DirectorEntity> update(@RequestBody DirectorEntity directorEntity, @PathVariable Integer id) {
-        DirectorEntity director = this.directorService.update(directorEntity, id);
+    public ResponseEntity<DirectorDto> update(@RequestBody DirectorDto directorDto, @PathVariable Integer id) {
+        DirectorDto director = this.directorService.update(directorDto, id);
         return ResponseEntity.ok(director);
     }
 

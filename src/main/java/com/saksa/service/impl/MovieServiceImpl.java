@@ -1,6 +1,6 @@
 package com.saksa.service.impl;
 
-import com.saksa.entity.MovieEntity;
+import com.saksa.dto.MovieDto;
 import com.saksa.repository.MovieRepository;
 import com.saksa.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,22 +14,22 @@ public class MovieServiceImpl implements MovieService {
     private MovieRepository movieRepository;
 
     @Override
-    public List<MovieEntity> getAll() {
+    public List<MovieDto> getAll() {
         return null;
     }
 
     @Override
-    public MovieEntity getById(Integer id) {
+    public MovieDto getById(Integer id) {
         return null;
     }
 
     @Override
-    public MovieEntity create(MovieEntity movie) {
+    public MovieDto create(MovieDto movieDto) {
         return null;
     }
 
     @Override
-    public MovieEntity update(MovieEntity movie, Integer id) {
+    public MovieDto update(MovieDto movieDto, Integer id) {
         return null;
     }
 

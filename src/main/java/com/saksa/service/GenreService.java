@@ -1,12 +1,12 @@
 package com.saksa.service;
 
-import com.saksa.entity.GenreEntity;
+import com.saksa.dto.GenreDto;
 import java.util.List;
 
 public interface GenreService {
-    public List<GenreEntity> getAll();
-    public GenreEntity getById(Integer id);
-    public GenreEntity create(GenreEntity genre);
-    public GenreEntity update(GenreEntity genre, Integer id);
+    public List<GenreDto> getAll();
+    public GenreDto getById(Integer id);
+    public GenreDto create(GenreDto genreDto);
+    public GenreDto update(GenreDto genreDto, Integer id);
     public void delete(Integer id);
 }

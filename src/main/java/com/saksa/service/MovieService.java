@@ -1,12 +1,12 @@
 package com.saksa.service;
 
-import com.saksa.entity.MovieEntity;
+import com.saksa.dto.MovieDto;
 import java.util.List;
 
 public interface MovieService {
-    public List<MovieEntity> getAll();
-    public MovieEntity getById(Integer id);
-    public MovieEntity create(MovieEntity movie);
-    public MovieEntity update(MovieEntity movie, Integer id);
+    public List<MovieDto> getAll();
+    public MovieDto getById(Integer id);
+    public MovieDto create(MovieDto movieDto);
+    public MovieDto update(MovieDto movieDto, Integer id);
     public void delete(Integer id);
 }

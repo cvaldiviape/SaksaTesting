@@ -1,6 +1,6 @@
 package com.saksa.service.impl;
 
-import com.saksa.entity.StudioEntity;
+import com.saksa.dto.StudioDto;
 import com.saksa.repository.StudioRepository;
 import com.saksa.service.StudioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,22 +14,22 @@ public class StudioServiceImpl implements StudioService {
     private StudioRepository studioRepository;
 
     @Override
-    public List<StudioEntity> getAll() {
+    public List<StudioDto> getAll() {
         return null;
     }
 
     @Override
-    public StudioEntity getById(Integer id) {
+    public StudioDto getById(Integer id) {
         return null;
     }
 
     @Override
-    public StudioEntity create(StudioEntity studio) {
+    public StudioDto create(StudioDto studioDto) {
         return null;
     }
 
     @Override
-    public StudioEntity update(StudioEntity studio, Integer id) {
+    public StudioDto update(StudioDto studioDto, Integer id) {
         return null;
     }
 

@@ -1,5 +1,6 @@
 package com.saksa.service.impl;
 
+import com.saksa.dto.GenreDto;
 import com.saksa.entity.GenreEntity;
 import com.saksa.repository.GenreRespository;
 import com.saksa.service.GenreService;
@@ -14,22 +15,22 @@ public class GenreServiceImpl implements GenreService {
     private GenreRespository genreRespository;
 
     @Override
-    public List<GenreEntity> getAll() {
+    public List<GenreDto> getAll() {
         return null;
     }
 
     @Override
-    public GenreEntity getById(Integer id) {
+    public GenreDto getById(Integer id) {
         return null;
     }
 
     @Override
-    public GenreEntity create(GenreEntity genre) {
+    public GenreDto create(GenreDto genreDto) {
         return null;
     }
 
     @Override
-    public GenreEntity update(GenreEntity genre, Integer id) {
+    public GenreDto update(GenreDto genreDto, Integer id) {
         return null;
     }
 
