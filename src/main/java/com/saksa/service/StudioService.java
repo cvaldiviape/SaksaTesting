@@ -1,6 +1,6 @@
 package com.saksa.service;
 
-import com.saksa.dto.StudioDto;
+import com.saksa.utils.dto.StudioDto;
 import java.util.List;
 
 public interface StudioService {

@@ -1,6 +1,6 @@
 package com.saksa.controller;
 
-import com.saksa.dto.MovieDto;
+import com.saksa.utils.dto.MovieDto;
 import com.saksa.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

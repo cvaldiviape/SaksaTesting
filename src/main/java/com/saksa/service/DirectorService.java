@@ -1,6 +1,6 @@
 package com.saksa.service;
 
-import com.saksa.dto.DirectorDto;
+import com.saksa.utils.dto.DirectorDto;
 import java.util.List;
 
 public interface DirectorService {

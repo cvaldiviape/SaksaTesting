@@ -1,7 +1,6 @@
 package com.saksa.service.impl;
 
-import com.saksa.dto.GenreDto;
-import com.saksa.entity.GenreEntity;
+import com.saksa.utils.dto.GenreDto;
 import com.saksa.repository.GenreRespository;
 import com.saksa.service.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;

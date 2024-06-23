@@ -1,6 +1,6 @@
 package com.saksa.service;
 
-import com.saksa.dto.GenreDto;
+import com.saksa.utils.dto.GenreDto;
 import java.util.List;
 
 public interface GenreService {

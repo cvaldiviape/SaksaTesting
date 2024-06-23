@@ -1,4 +1,4 @@
-package com.saksa.dto;
+package com.saksa.utils.dto;
 
 import com.saksa.entity.ActorEntity;
 import com.saksa.entity.DirectorEntity;

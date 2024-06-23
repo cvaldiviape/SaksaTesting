@@ -1,6 +1,6 @@
 package com.saksa.service;
 
-import com.saksa.dto.ActorDto;
+import com.saksa.utils.dto.ActorDto;
 import java.util.List;
 
 public interface ActorService {

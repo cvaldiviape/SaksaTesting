@@ -3,7 +3,7 @@ package com.saksa.entity;
 import com.saksa.utils.Sex;
 import jakarta.persistence.*;
 import lombok.*;
-import java.math.BigDecimal;
+
 import java.util.Objects;
 
 @Builder

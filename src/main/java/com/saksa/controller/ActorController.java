@@ -1,6 +1,6 @@
 package com.saksa.controller;
 
-import com.saksa.dto.ActorDto;
+import com.saksa.utils.dto.ActorDto;
 import com.saksa.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

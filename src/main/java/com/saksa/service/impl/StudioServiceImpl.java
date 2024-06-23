@@ -1,6 +1,6 @@
 package com.saksa.service.impl;
 
-import com.saksa.dto.StudioDto;
+import com.saksa.utils.dto.StudioDto;
 import com.saksa.repository.StudioRepository;
 import com.saksa.service.StudioService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.saksa.service.impl;
 
-import com.saksa.dto.ActorDto;
+import com.saksa.utils.dto.ActorDto;
 import com.saksa.repository.ActorRepository;
 import com.saksa.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;

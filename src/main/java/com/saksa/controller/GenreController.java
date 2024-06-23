@@ -1,6 +1,6 @@
 package com.saksa.controller;
 
-import com.saksa.dto.GenreDto;
+import com.saksa.utils.dto.GenreDto;
 import com.saksa.service.GenreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

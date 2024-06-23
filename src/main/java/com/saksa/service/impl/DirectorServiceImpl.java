@@ -1,6 +1,6 @@
 package com.saksa.service.impl;
 
-import com.saksa.dto.DirectorDto;
+import com.saksa.utils.dto.DirectorDto;
 import com.saksa.repository.DirectorRepository;
 import com.saksa.service.DirectorService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.saksa.dto;
+package com.saksa.utils.dto;
 
 import lombok.*;
 import java.time.LocalDate;

@@ -1,6 +1,6 @@
 package com.saksa.service.impl;
 
-import com.saksa.dto.MovieDto;
+import com.saksa.utils.dto.MovieDto;
 import com.saksa.repository.MovieRepository;
 import com.saksa.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
